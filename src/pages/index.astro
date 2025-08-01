@@ -8,12 +8,36 @@ import PageHeader from '../components/PageHeader.astro';
 
 <Layout title="私のホームページ">
 	<PageHeader />
-	<p>ようこそ私のホームページへ</p>
+	<p>ようこそ私のホームページへ!</p>
+	<a href="/about">About</a>
 </Layout>
 
 <style>
 	p {
 		font: 1.5rem;
 		text-align: center;
+	}
+
+	a{
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 20px;
+		color: #178474;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 1.5rem;
+		background-color: #fff;
+		padding: 10px 20px;
+		border-radius: 45px;
+		box-shadow: 0 0 10px rgba(170, 233, 225, 0.1);
+		transition: all 0.3s ease;
+		cursor: pointer;
+
+		&:hover{
+			background-color: #178474;
+			color: #fff;
+		}
 	}
 </style>
