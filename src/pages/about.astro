@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<Layout title="私のホームページ">
+	<PageHeader />
+  <section>
+    <h3>自己紹介</h3>
+    <p>フロントエンドエンジニアとしてWEBサイト制作をしています。<br><br>
+      HTML、CSS、JavaScriptを利用したサイト制作のほか、WordPressなどを利用したCMSサイト構築も行なっています。<br><br>
+      現在はAstroを勉強中です!</p>
+  </section>
+
+  <section>
+    <h3>趣味</h3>
+    <p>映画・漫画・ゲームなど、ストーリーのあるものの鑑賞が大好きです。</p>
+    <dl>
+      <dt>映画</dt>
+      <dd>MEG2</dd>
+      <dt>漫画</dt>
+      <dd>ジョジョの奇妙な冒険</dd>
+      <dt>ゲーム</dt>
+      <dd>ファイアーエムブレム蒼炎の軌跡</dd>
+    </dl>
+  </section>
+</Layout>
+
+<style>
+  section {
+    max-width: 40%;
+    margin-top: -200px;
+    margin-left: -50px;
+    padding: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(170, 233, 225, 0.1);
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    &:nth-child(even) {
+      background-color: #f1f6f4;
+      margin-left: auto;
+      margin-right: -50px;
+    }
+  }
+
+  h3{
+    margin: 0 0 15px;
+    color: #178474;
+  }
+
+  dt{
+    color: #178474;
+  }
+</style>
