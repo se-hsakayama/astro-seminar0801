@@ -1,32 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
+import { Image } from 'astro:assets';
+import icon_seal from '../assets/icon_seal.png';
 ---
 
 <Layout title="私のホームページ">
 	<PageHeader />
-  <section>
-    <h3>自己紹介</h3>
-    <p>フロントエンドエンジニアとしてWEBサイト制作をしています。<br><br>
-      HTML、CSS、JavaScriptを利用したサイト制作のほか、WordPressなどを利用したCMSサイト構築も行なっています。<br><br>
-      現在はAstroを勉強中です!</p>
-  </section>
-
-  <section>
-    <h3>趣味</h3>
-    <p>映画・漫画・ゲームなど、ストーリーのあるものの鑑賞が大好きです。</p>
-    <dl>
-      <dt>映画</dt>
-      <dd>MEG2</dd>
-      <dt>漫画</dt>
-      <dd>ジョジョの奇妙な冒険</dd>
-      <dt>ゲーム</dt>
-      <dd>ファイアーエムブレム蒼炎の軌跡</dd>
-    </dl>
-  </section>
+  <div class="About">
+    <Image src={icon_seal} width={400} height={400} alt="自己紹介" />
+    <section>
+      <h3>自己紹介</h3>
+      <p>フロントエンドエンジニアとしてWEBサイト制作をしています。<br><br>
+        HTML、CSS、JavaScriptを利用したサイト制作のほか、WordPressなどを利用したCMSサイト構築も行なっています。<br><br>
+        現在はAstroを勉強中です!</p>
+    </section>
+  
+    <section>
+      <h3>趣味</h3>
+      <p>映画・漫画・ゲームなど、ストーリーのあるものの鑑賞が大好きです。</p>
+      <dl>
+        <dt>映画</dt>
+        <dd>MEG2</dd>
+        <dt>漫画</dt>
+        <dd>ジョジョの奇妙な冒険</dd>
+        <dt>ゲーム</dt>
+        <dd>ファイアーエムブレム蒼炎の軌跡</dd>
+      </dl>
+    </section>
+  </div>
 </Layout>
 
 <style>
+  .About{
+    position: relative;
+  }
+
   section {
     max-width: 40%;
     margin-top: -200px;
@@ -48,7 +57,7 @@ import PageHeader from '../components/PageHeader.astro';
       margin-bottom: 20px;
     }
 
-    &:nth-child(even) {
+    &:nth-child(2n+1) {
       background-color: #f1f6f4;
       margin-left: auto;
       margin-right: -50px;
@@ -62,5 +71,14 @@ import PageHeader from '../components/PageHeader.astro';
 
   dt{
     color: #178474;
+  }
+
+  img{
+    position: absolute;
+    top: 100px;
+    left: 45%;
+    width: 35%;
+    height: auto;
+    z-index: 1;
   }
 </style>
